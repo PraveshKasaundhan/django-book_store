@@ -1,0 +1,15 @@
+{% extends "book_outlet/base.html" %}
+{% load static %}
+
+{% block title %}{{abook.title}}{% endblock title %}
+
+{% block css_files %}{% endblock css_files %}
+
+{% block content %}
+    <h1>Title : {{abook.title}}</h1>
+    <h2>Author of the book is : {{abook.author}}</h2>
+    <h3>Rated : {{abook.rating}}</h3>
+    {% if abook.is_best %}
+        <h4>This book is the Pizaz!</h4>
+    {% endif %}
+{% endblock content %}
